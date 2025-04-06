@@ -1,0 +1,7 @@
+    Feature: View Invoices
+
+    Scenario: Client views their invoice
+    Given the client has completed a session with "Coach Fuad"
+    And an invoice for €50 has been created
+    When the client visits the invoice page
+    Then the invoice details should be visible with a list of items

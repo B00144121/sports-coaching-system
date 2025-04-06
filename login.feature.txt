@@ -1,0 +1,11 @@
+Feature: Login Functionality
+
+    User logs in successfully
+    Given a coach exists with an email example coachfuad@fit.com" and password "password"
+    When the coach logs in with email "coachfuad@fit.com" and password "password"
+    Then the coach should be redirected to the homepage
+
+    User fails to login with wrong password
+    If a client exists with email "coachfuad@fit.com" and password "password"
+    When the client logs in with the wrong password
+    Then an error message should be displayed on the page

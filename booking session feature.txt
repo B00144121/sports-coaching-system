@@ -1,0 +1,10 @@
+Feature: Book a Coaching Session
+
+    Scenario: Client books a session with a coach
+    Given the client is logged in
+    And the coach "fuad" is available on "2025-04-16"
+    When the client selects a 1-hour session at "10:00"
+    And clicks "Book"
+    Then the session should appear on their dashboard
+    Once the session is saved it should be in the database.
+    The client is able to view the invoice.

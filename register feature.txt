@@ -1,0 +1,7 @@
+Feature: User Registration
+
+  Scenario: New client registers for coaching
+    Given the user visits the registration page
+    When they enter email "clientnumber1@sportsfit.com" and password "password"
+    And click "Register"
+    Then they should be taken to the login page
